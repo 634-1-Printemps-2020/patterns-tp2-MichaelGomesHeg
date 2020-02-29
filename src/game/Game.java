@@ -24,6 +24,8 @@ public class Game {
      */
     public void addPlayer(Player player) {
       // TODO: Votre code ici
+        history.put(player, null);
+
     }
 
     /**
@@ -31,6 +33,38 @@ public class Game {
      */
     public void play() {
       // TODO: Votre code ici
+        List<CoinState> list;
+
+        for(Player player : history.keySet()){
+            list = new ArrayList<>();
+            while(ListComplete(list)==false){
+                player.play(coin = new Coin());
+                list.add(coin.getState());
+            }
+            history.put(player, list);
+        }
+
+    }
+
+    /***
+     * Méthode qui vérifie si l'utilsiateur a gagné
+     * @param list
+     * @return
+     */
+    public Boolean ListComplete(List<CoinState> list){
+        Integer cpt = 0;
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i)==CoinState.HEADS){
+                cpt += 1;
+                if (cpt==3){
+                    return true;
+                }
+            }
+           else{
+                    cpt = 0;
+           }
+        }
+        return false;
     }
 
     /**
@@ -50,7 +84,7 @@ public class Game {
      */
     public Map<Player, List<CoinState>> getHistory() {
       // TODO: Votre code ici
-      return null;
+      return history;
     }
 
 
@@ -62,7 +96,7 @@ public class Game {
      */
     public List<CoinState> getSpecificHistory(Player player) {
       // TODO: Votre code ici
-      return null;
+      return history.get(player);
     }
 
 }
