@@ -1,10 +1,10 @@
 package materials;
 
 public class Coin {
-
+  private static Coin uniqueInstance = null;
   private CoinState coinState;
 
-  public Coin() {
+  private Coin() {
   }
 
   /**
@@ -24,8 +24,13 @@ public class Coin {
       }else{
         coinState = CoinState.TAILS;
       }
+  }
 
-
+  public static Coin getInstance(){
+      if(uniqueInstance == null){
+          uniqueInstance = new Coin();
+      }
+      return uniqueInstance;
   }
 
   public CoinState getState() {

@@ -10,7 +10,7 @@ import java.util.*;
 public class Game {
 
     private Rules rules;
-    private Coin coin;
+    private Coin coin = Coin.getInstance();
     private Map<Player, List<CoinState>> history;
 
     public Game() {
@@ -34,11 +34,13 @@ public class Game {
     public void play() {
       // TODO: Votre code ici
         List<CoinState> list;
+        rules = new Rules();
 
         for(Player player : history.keySet()){
             list = new ArrayList<>();
-            while(ListComplete(list)==false){
-                player.play(coin = new Coin());
+            while(rules.checkWin(list)==false){
+                coin.getInstance();
+                player.play(coin);
                 list.add(coin.getState());
             }
             history.put(player, list);
@@ -74,7 +76,42 @@ public class Game {
      */
     public Statistics getStatistics() {
       // TODO: Votre code ici
-      return null;
+        return new Statistics(averageToWin(),fewerMoves(), MostMoves(), TotalTir());
+    }
+
+    public Integer TotalTir(){
+        int totalTir = 0;
+        for(Player player: history.keySet()){
+           totalTir += history.get(player).size();
+        }
+        return totalTir;
+    }
+
+    public Integer MostMoves(){
+        int totalTir = 0;
+        for(Player player: history.keySet()){
+            int TirJoueur = history.get(player).size();
+            if(totalTir<TirJoueur){
+                totalTir = TirJoueur;
+            }
+        }
+        return totalTir;
+    }
+
+    public Integer fewerMoves(){
+        int totalTir = 0;
+        for(Player player: history.keySet()){
+            int TirJoueur = history.get(player).size();
+            if(totalTir<TirJoueur){
+
+            }
+        }
+        return totalTir;
+    }
+
+
+    public int averageToWin(){
+        return TotalTir() / history.size();
     }
 
     /**

@@ -18,6 +18,18 @@ public class  Rules {
   public boolean checkWin(List<CoinState> states) {
     // TODO: Votre code ici
 
+    Integer cpt = 0;
+    for (int i = 0; i < states.size(); i++) {
+      if(states.get(i)==CoinState.HEADS){
+        cpt += 1;
+        if (cpt==3){
+          return true;
+        }
+      }
+      else{
+        cpt = 0;
+      }
+    }
     return false;
   }
 }
