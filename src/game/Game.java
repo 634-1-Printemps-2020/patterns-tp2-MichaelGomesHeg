@@ -34,7 +34,7 @@ public class Game {
     public void play() {
       // TODO: Votre code ici
         List<CoinState> list;
-        rules = new Rules();
+        rules = Rules.getInstance();
 
         for(Player player : history.keySet()){
             list = new ArrayList<>();

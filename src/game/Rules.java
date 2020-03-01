@@ -6,8 +6,9 @@ import materials.CoinState;
 import java.util.List;
 
 public class  Rules {
+private static Rules uniqueInstance = null;
 
-  public Rules() {
+  private Rules() {
   }
 
   /**
@@ -31,5 +32,12 @@ public class  Rules {
       }
     }
     return false;
+  }
+
+  public static Rules getInstance(){
+    if(uniqueInstance == null){
+      uniqueInstance = new Rules();
+    }
+    return uniqueInstance;
   }
 }
