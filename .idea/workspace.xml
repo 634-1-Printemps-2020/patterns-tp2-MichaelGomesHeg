@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c32d158-fa13-4c1e-8219-09e621954e3b" name="Default" comment="Continuation de la méthode &quot;Game&quot; et mise en place du pattern Singleton sur la classe Coin" />
+    <list default="true" id="3c32d158-fa13-4c1e-8219-09e621954e3b" name="Default" comment="Mise en place du Pattern Singleton sur la classe Rules">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583002345479</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mise en place du Pattern Singleton sur la classe Rules">
+      <created>1583061559561</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1583061559561</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,7 +142,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -141,7 +153,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Premier commit -&gt; début de mise en place de la méthode &quot;Game&quot;" />
     <MESSAGE value="Continuation de la méthode &quot;Game&quot; et mise en place du pattern Singleton sur la classe Coin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continuation de la méthode &quot;Game&quot; et mise en place du pattern Singleton sur la classe Coin" />
+    <MESSAGE value="Mise en place du Pattern Singleton sur la classe Rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mise en place du Pattern Singleton sur la classe Rules" />
   </component>
   <component name="WindowStateProjectService">
     <state x="730" y="222" key="#com.intellij.ide.util.MemberChooser" timestamp="1582451659529">

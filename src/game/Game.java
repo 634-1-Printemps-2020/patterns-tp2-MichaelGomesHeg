@@ -102,8 +102,11 @@ public class Game {
         int totalTir = 0;
         for(Player player: history.keySet()){
             int TirJoueur = history.get(player).size();
-            if(totalTir<TirJoueur){
-
+            if(totalTir == 0){
+                totalTir = 100000000;
+            }
+            if(totalTir>TirJoueur){
+                totalTir = TirJoueur;
             }
         }
         return totalTir;
